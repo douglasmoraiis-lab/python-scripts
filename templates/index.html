@@ -3,7 +3,6 @@
   <h2>Menu de Atividades</h2>
   <ul>
     {% for act in activities %}
-      <!-- A linha abaixo foi modificada para um visual mais limpo -->
       <li><a href="{{ url_for('activity', act=act) }}">Atividade {{ act.replace('atv', '') }}</a></li>
     {% endfor %}
   </ul>
