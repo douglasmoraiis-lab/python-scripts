@@ -1,0 +1,24 @@
+{{% block content %}}
+<h2>Atividade {n}</h2>
+<form method="post">
+    {{% block form_content %}}
+    <!--
+      Esta é a área padrão do formulário.
+      Para atividades específicas, você pode criar um bloco de formulário
+      e sobrescrever este conteúdo no arquivo atvX.html.
+      Exemplo para Atividade 1:
+    -->
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    
+    {{% endblock %}}
+
+    <!-- Botão principal de submissão -->
+    <button type="submit">Executar</button>
+</form>
+
+<!-- Botão para voltar ao menu principal -->
+<div class="button-group">
+    <a href="{{ url_for('index') }}" class="btn-voltar">⌂ Voltar ao Menu</a>
+</div>
+{{% endblock %}}

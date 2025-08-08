@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Atividade 3: Maior de Dois Números</h2>
+<form method="post">
+    <label for="num1">Digite o primeiro número:</label>
+    <input type="number" step="any" id="num1" name="num1" required>
+    
+    <label for="num2">Digite o segundo número:</label>
+    <input type="number" step="any" id="num2" name="num2" required>
+    
+    <button type="submit">Verificar Maior</button>
+</form>
+{% endblock %}

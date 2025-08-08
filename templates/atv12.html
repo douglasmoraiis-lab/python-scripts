@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Atividade 12: Acesso com Senha</h2>
+<p>A senha correta é 1234.</p>
+<form method="post">
+    <label for="senha">Digite a senha de 4 dígitos:</label>
+    <input type="password" id="senha" name="senha" required maxlength="4">
+    <button type="submit">Validar Acesso</button>
+</form>
+{% endblock %}

@@ -1,15 +1,12 @@
-#Peça 3 notas e calcule a média.
-#Caso contrário, exiba "Reprovado".
-
-nota1 = float(input("Digite a Primeira nota: "))
-nota2 = float(input("Digite a Segunda nota: "))
-nota3 = float(input("Digite a Terceira nota: "))
-
-media = (nota1 + nota2 + nota3) /3
-
-print(f"\nSua média é: {media:.2f}")
-
-if media >= 7:
-  print("Parabéns, você foi Aprovado")
-else:
-  print("Ops, você foi Reprovado! Tente novamente")
+def run(form):
+    nota1 = float(form.get("nota1", 0))
+    nota2 = float(form.get("nota2", 0))
+    nota3 = float(form.get("nota3", 0))
+    media = (nota1 + nota2 + nota3) / 3
+    
+    resultado = f"Sua média é: {media:.2f}\n"
+    if media >= 7:
+        resultado += "Parabéns, você foi Aprovado!"
+    else:
+        resultado += "Ops, você foi Reprovado! Tente novamente."
+    return resultado

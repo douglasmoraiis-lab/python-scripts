@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Atividade 13: Vogal ou Consoante</h2>
+<form method="post">
+    <label for="letra">Digite uma letra do alfabeto:</label>
+    <input type="text" id="letra" name="letra" required maxlength="1">
+    <button type="submit">Verificar</button>
+</form>
+{% endblock %}

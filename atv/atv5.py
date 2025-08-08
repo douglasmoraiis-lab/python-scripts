@@ -1,4 +1,6 @@
-#Peça um número N e conte de 1 até N mostrando cada número.
-num = int(input("Digite um número N: "))
-for i in range(1, num + 1):
-  print(f"Contando: {i}")
+def run(form):
+    num = int(form.get("num", 0))
+    resultado = []
+    for i in range(1, num + 1):
+        resultado.append(f"Contando: {i}")
+    return "\n".join(resultado)

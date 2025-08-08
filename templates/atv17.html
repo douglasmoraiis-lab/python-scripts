@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Atividade 17: Sistema de Login</h2>
+<p>Use o login 'admin' e a senha '1234'.</p>
+<form method="post">
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login" required>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    <button type="submit">Entrar</button>
+</form>
+{% endblock %}

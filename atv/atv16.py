@@ -1,14 +1,13 @@
-#Peça três lados ao usuário e diga se formam um triângulo. Se sim, informe se é equilátero, isósceles ou escaleno.
-lado1 = float(input("Digite o primeiro lado: "))
-lado2 = float(input("Digite o segundo lado: "))
-lado3 = float(input("Digite o terceiro lado: "))
-if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
-    print("Os lados formam um triângulo.")
-    if lado1 == lado2 == lado3:
-        print("O triângulo é equilátero.")
-    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-        print("O triângulo é isósceles.")
-    else:
-        print("O triângulo é escaleno.")
-else:
-    print("Os lados não formam um triângulo.")
+def run(form):
+    try:
+        idade = int(form.get("idade", -1))
+        if 0 <= idade <= 3:
+            return "Faixa Etária: Berçário."
+        elif 4 <= idade <= 5:
+            return "Faixa Etária: Pré-escola."
+        elif 6 <= idade <= 10:
+            return "Faixa Etária: Ensino Fundamental I."
+        else:
+            return "Fora da faixa etária coberta (0-10 anos)."
+    except ValueError:
+        return "Erro: Por favor, digite uma idade válida."

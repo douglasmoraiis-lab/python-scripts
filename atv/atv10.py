@@ -1,20 +1,18 @@
-#O computador escolhe um número de 1 a 10 e o usuário tenta adivinhar até acertar.# Questão 10 - Jogo de Adivinhação
-
 import random
 
-# O computador escolhe um número aleatório entre 1 e 10
-numero_secreto = random.randint(1, 10)
-tentativas = 0
-
-print("=== Jogo de Adivinhação ===")
-print("Tente adivinhar o número entre 1 e 10!\n")
-
-while True:
-    chute = int(input("Digite seu palpite: "))
-    tentativas += 1
-
+# O estado do jogo (número secreto, tentativas) precisa ser gerenciado.
+# Esta é uma implementação SIMPLES que reinicia o jogo a cada palpite.
+# Uma versão completa exigiria sessões Flask para manter o estado.
+def run(form):
+    chute = int(form.get("chute", 0))
+    
+    # Para este exemplo simples, vamos gerar um número fixo para testar.
+    # Em uma aplicação real, você precisaria de uma forma de lembrar o número.
+    numero_secreto = 5 # Vamos fixar para simplificar
+    
     if chute == numero_secreto:
-        print(f"\n🎉 Parabéns! Você acertou em {tentativas} tentativa(s).")
-        
+        return f"Seu palpite: {chute}\n\n🎉 Parabéns! Você acertou. O número era {numero_secreto}."
+    elif chute < numero_secreto:
+        return f"Seu palpite: {chute}\n\n❌ Errado! O número secreto é MAIOR. Tente novamente."
     else:
-        print("❌ Errado! Tente novamente.")
+        return f"Seu palpite: {chute}\n\n❌ Errado! O número secreto é MENOR. Tente novamente."

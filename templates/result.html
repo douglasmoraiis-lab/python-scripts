@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Resultado - {{ act.replace('atv', 'Atividade ') }}</h2>
+  
+  <pre>{{ result }}</pre>
+  
+  <!-- Grupo de botões de ação -->
+  <div class="button-group">
+    <a href="{{ url_for('activity', act=act) }}" class="btn-voltar">← Tentar Novamente</a>
+    <a href="{{ url_for('index') }}" class="btn-voltar">⌂ Voltar ao Menu</a>
+  </div>
+
+{% endblock %}

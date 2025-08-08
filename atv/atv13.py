@@ -1,7 +1,9 @@
-# Leia uma letra do alfabeto e diga se é uma vogal ou consoante.
+def run(form):
+    letra = form.get("letra", "").lower()
+    if len(letra) != 1 or not letra.isalpha():
+        return "Erro: Por favor, digite uma única letra do alfabeto."
 
-Letra = input("Digite uma letra do alfabeto: ").lower()
-if Letra in "aeiou":
-  print("A letra é uma vogal.")
-else:
-  print("A letra é uma consoante.")
+    if letra in "aeiou":
+        return f"A letra '{letra}' é uma VOGAL."
+    else:
+        return f"A letra '{letra}' é uma CONSOANTE."

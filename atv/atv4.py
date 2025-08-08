@@ -1,7 +1,6 @@
-#Par ou Ímpar
-num = int(input("Digite um número :"))
-if num % 2 == 0:
-  print(f"O número {num} é par")
-else: 
-  print(f"O número {num} é ímpar")
-  
+def run(form):
+    num = int(form.get("num", 0))
+    if num % 2 == 0:
+        return f"O número {num} é PAR."
+    else:
+        return f"O número {num} é ÍMPAR."
